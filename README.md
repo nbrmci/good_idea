@@ -17,7 +17,7 @@ GoodIdea.comはユーザー同士が便利を共有するアプリケーショ�
 
 ### 【デモ】
 herokuを用いて本番環境にデプロイしています。
-URL...
+URL：https://good-idea27912.herokuapp.com/
 
 ◎テスト用アカウント
 * 投稿者
