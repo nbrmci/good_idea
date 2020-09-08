@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="header-left">
+    <p>便利一覧</p>
+  </div>
+  <% if user_signed_in? %>
+    <div class=header-right>
+      <a href="/" class="header-link">ホーム</a>
+      <a href="/items/new" class="header-link">便利を共有する</a>
+      <%# <a href="/items" class="header-link">便利一覧</a> %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-link" %>
+    </div>
+  <% else %>
+    <div class=header-right>
+      <a href="/" class="header-link">ホーム</a>
+      <a href="/users/sign_up" class="header-link">新規登録</a>
+      <%# <a href="/items" class="header-link">便利一覧</a> %>
+      <a href="/users/sign_in" class="header-link">ログイン</a>
+    </div>
+  <% end %>
+</div>
+<div class="item-contents">
+  <% @items.each do |item| %>
+    <% if user_signed_in? && current_user.id == item.id %>
+      <div class="item">
+        <p class="item-name"><%= item.name %></p>
+        <%= image_tag item.image.variant(resize: '200x200'), class: "item-img" %>
+        <p class="item-place">購入場所：<%= item.place %></p>
+        <p class="item-describe">便利な点：<%= item.describe %></p>
+        <p class="edit">便利の編集</p>
+        <p class="destroy">便利の削除</p>
+      </div>
+    <% else %>
+      <div class="item">
+        <p class="item-name"><%= item.name %></p>
+        <%= image_tag item.image.variant(resize: '200x200'), class: "item-img" %>
+        <p class="item-place">購入場所：<%= item.place %></p>
+        <p class="item-describe">便利な点：<%= item.describe %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

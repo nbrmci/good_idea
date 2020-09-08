@@ -1,0 +1,31 @@
+.top-new {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7c247;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 40px;
+  }
+  .box {
+    height: 60px;
+    width: 200px;
+    margin-bottom: 30px;
+    .box-name {
+      height: 50px;
+      width: 200px;
+      font-size: 25px;
+    }
+    .box-mail {
+      height: 60px;
+      width: 350px;
+      font-size: 25px;
+    }
+  }
+}

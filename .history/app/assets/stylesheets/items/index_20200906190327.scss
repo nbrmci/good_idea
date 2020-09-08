@@ -1,0 +1,16 @@
+.main-contents {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  background-color: #f7c247;
+  overflow: scroll;
+  .item-contents {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .item-name {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}

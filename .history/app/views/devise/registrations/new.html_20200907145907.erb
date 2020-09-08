@@ -1,0 +1,31 @@
+<div class="top-new">
+  <h2>Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    
+    <div class="box">
+      <%= f.label :ニックネーム %> <em>(6文字以内)</em><br />
+      <%= f.text_field :nickname, class: 'box-name', autofocus: true, maxlength: "6" %>
+    </div>
+
+    <div class="box">
+      <%= f.label :メールアドレス %><br />
+      <%= f.email_field :email, class: 'box-mail', autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="box">
+      <%= f.label :パスワード %>
+      <%= f.password_field :password, class:'box-password', autocomplete: "new-password" %>
+    </div>
+
+    <div class="box">
+      <%= f.label :パスワード（確認） %>
+      <%= f.password_field :password_confirmation, class:'box-password', autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "登録する" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,15 @@
+.main-contents {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  background-color: #f7c247;
+  .item {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 10px;
+    .item-name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<div class="header">
+  <div class="header-left">
+    <p>GoodIdea.com</p>
+  </div>
+  <% if user_signed_in? %>
+    <div class=header-right>
+      <a href="/" class="header-link">ホーム</a>
+      <a href="/items/new" class="header-link">便利を共有する</a>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-link" %>
+    </div>
+  <% else %>
+    <div class=header-right>
+      <a href="/" class="header-link">ホーム</a>
+      <a href="/users/sign_up" class="header-link">新規登録</a>
+      <a href="/users/sign_in" class="header-link">ログイン</a>
+    </div>
+  <% end %>
+</div>
+<div class="item-contents">
+  <% @items.each do |item| %>
+    <% if user_signed_in? && current_user.id == item.user_id %>
+      <div class="item">
+        <div class="front">
+          <%= image_tag item.image.variant(resize: '240x240'), class: "item-img" %>
+          <p class="item-name"><%= item.name %></p>
+          <p class="item-place">購入場所：<%= item.place %></p>
+        </div>
+        <div class="back">
+          <p class="item-title">便利ポイント</p>
+          <p class="item-describe"><%= item.describe %></p>
+          <div class="link">
+            <%= link_to '便利の編集', edit_item_path(item.id), method: :get, class: 'edit' %>
+            <%= link_to '便利の削除', item_path(item.id), method: :delete, class: 'destroy' %>
+          </div>
+        </div>
+      </div>
+    <% elsif user_signed_in? && current_user.id != item.user_id%>
+      <div class="item">
+        <div class="front">
+          <%= image_tag item.image.variant(resize: '240x240'), class: "item-img" %>
+          <p class="item-name"><%= item.name %></p>
+          <p class="item-place">購入場所：<%= item.place %></p>
+        </div>
+        <div class="back">
+          <p class="item-title">便利ポイント</p>
+          <p class="item-describe"><%= item.describe %></p>
+        </div>
+        <div id="like-btn-<%= item.id %>">
+          <%= render 'likes/like', item: item %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

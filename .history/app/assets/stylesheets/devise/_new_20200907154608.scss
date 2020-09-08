@@ -1,0 +1,42 @@
+.top-new {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7c247;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 40px;
+  }
+  .box {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    .box-name {
+      height: 100px;
+      width: 200px;
+      font-size: 20px;
+    }
+    .box-mail,.box-password {
+      height: 100px;
+      width: 350px;
+      font-size: 20px;
+    }
+  }
+  .actions {
+    font-size: 25px;
+    .submit {
+      background-color: #ffffff;
+      color: black;
+    }
+  }
+}

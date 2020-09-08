@@ -1,0 +1,9 @@
+<% if item.liked_by?(current_user) %>
+   <%= link_to(item_add_path(post), method: :delete, remote: true, id: :"like-button-#{item.id}") do %>
+       <i class="fa-lg fas fa-heart icon-btn liked"></i>
+   <% end %>
+<% else %>
+   <%= link_to(item_add_path(post), method: :post, remote: true, id: :"like-button-#{item.id}") do %>
+       <i class="fa-lg fas fa-heart icon-btn not-like"></i>
+   <% end %>
+<% end %>

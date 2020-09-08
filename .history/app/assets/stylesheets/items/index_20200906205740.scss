@@ -1,0 +1,16 @@
+.item-contents {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: #f7c247;
+  overflow: scroll;
+  display: grid;
+  grid-template-rows: 250px auto;
+  grid-template-columns: auto 350px;
+  padding-top: 30px;
+  .item {
+    width: 230px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+}

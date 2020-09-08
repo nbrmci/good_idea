@@ -1,0 +1,24 @@
+.main-contents {
+  height: calc(100vh - 80px);
+  width: 100vw;
+  background-color: #f7c247;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  .item-contents {
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .item-name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}

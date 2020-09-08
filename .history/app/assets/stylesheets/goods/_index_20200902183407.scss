@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arimo,sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 80px;
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-left {
+    padding-left: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  .header-right {
+    padding-right: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+  }
+  .header-link {
+    color: black;
+    margin-right: 30px;
+  }
+}
+
+.top-img {
+  background-size: cover;
+}

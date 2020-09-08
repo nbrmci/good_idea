@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="header-left">
+    <p>GoodIdea.com</p>
+  </div>
+  <% if user_signed_in? %>
+    <div class=header-right>
+      <a href="#" class="header-link">ホーム</a>
+      <a href="#" class="header-link">便利を共有する</a>
+      <a href="#" class="header-link">便利一覧</a>
+      <a href="/users/sign_out" class="header-link">ログアウト</a>
+    </div>
+  <% else %>
+    <div class=header-right>
+    <a href="#" class="header-link">ホーム</a>
+    <a href="/users/sign_up" class="header-link">新規登録</a>
+    <a href="#" class="header-link">便利一覧</a>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header-link" %>
+  </div>
+  <% end %>
+</div>
+
+<div class="header-img">
+  <%= image_tag "h-img.jpg", class: "top-img" %>
+  <p class="header-title">暮らしをもっと便利にしませんか？</p>
+  <p class="header-describe">あなたの便利を共有しましょう。<br>
+  ユーザー同士で共有し合うことで、<br>家事や料理の効率が良くなり、時間が短縮されるかもしれません。
+  </p>
+  <p class="header-describe2">
+    ユーザー登録して頂くことで便利を共有できます。<br>
+    ご登録いただき、是非あなたの便利を教えてください。
+  </p>
+</div>

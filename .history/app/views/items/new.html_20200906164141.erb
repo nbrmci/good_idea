@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_with(model: @item, local: true) do |form| %>
+      <h3>投稿する</h3>
+      <%= form.text_field :name, placeholder: "商品名など入力してください" %>
+      <%= form.file_field :image, placeholder: "画像をアップロードしてください" %>
+      <%= form.text_field :place, placeholder: "購入できる場所など教えてください" %>
+      <%= form.text_area :text, placeholder: "便利のポイントを教えてください", rows: "10" %>
+      <%= form.submit "便利を共有する" %>
+    <% end %>
+  </div>
+</div>

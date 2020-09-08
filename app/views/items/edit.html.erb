@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="header-left">
+    <p>GoodIdea.com</p>
+  </div>
+  <div class=header-right>
+    <a href="/items" class="header-link">戻る</a>
+  </div>
+</div>
+<div class="top-new">
+  <%= form_with(model: @item, local: true) do |form| %>
+    <h2>便利の編集</h2>
+    <div class="box">
+      <%= form.text_field :name, placeholder: "商品名など入力してください", class: 'name-item' %>
+    </div>
+    <div class="box">
+      <%= form.file_field :image, placeholder: "画像をアップロードしてください", class: 'file-item' %>
+    </div>
+    <div class="box">
+      <%= form.text_field :place, placeholder: "購入できる場所など教えてください", class: 'place-item' %>
+    </div>
+    <div class="box">
+      <%= form.text_area :describe, placeholder: "便利のポイントを教えてください", rows: "10", class: 'describe-item' %>
+    </div>
+    <div class="actions">
+      <%= form.submit "便利を編集する", class: 'submit' %>
+    </div>
+  <% end %>
+</div>
