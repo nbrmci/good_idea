@@ -34,6 +34,28 @@ GoodIdea.comはユーザー同士が便利を共有するアプリケーショ�
 登録後ログイン画面
 [![Image from Gyazo](https://i.gyazo.com/d70a0f23dc929b383a6f59d9379656dd.png)](https://gyazo.com/d70a0f23dc929b383a6f59d9379656dd)
 
+### 【DB設計】
+### Userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+
+#### Assosiation
+- has_many :items
+
+### Itemテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|place|string|null: false|
+|describe|string|null: false|
+
+#### Assosiation
+- belongs_to :user
+- has_one_attached :image
+
 ### 【工夫した点】
 便利の詳細を見るのにページ遷移を考えていましたが、遷移することなく便利の詳細が確認できた方がよりユーザーにとって見やすくなると思いました。
 カード型にして、表にタイトルや画像を、裏面に詳細な説明を表示するように実装しました。
