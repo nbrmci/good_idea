@@ -18,6 +18,7 @@ GoodIdea.comはユーザー同士が便利を共有するアプリケーショ�
 便利の詳細もクリックすることで見れるようになっています。
 [![Image from Gyazo](https://i.gyazo.com/5bf43241bf96851c3613868330df095c.gif)](https://gyazo.com/5bf43241bf96851c3613868330df095c)
 
+
 便利を投稿するには、
 * 商品名などのタイトル
 * 画像（現在は１枚のみ投稿可能、今後もっと商品などのイメージがつきやすいように複数枚投稿の実装予定）
@@ -25,8 +26,10 @@ GoodIdea.comはユーザー同士が便利を共有するアプリケーショ�
 * 便利だと思うポイントの説明、この４点は入力必須項目となっています。
 [![Image from Gyazo](https://i.gyazo.com/e2074751441f12bebddec08515de7b08.png)](https://gyazo.com/e2074751441f12bebddec08515de7b08)
 
+
 ユーザー新規登録画面
 [![Image from Gyazo](https://i.gyazo.com/567b679ddc5c3b82348e94aab14fb580.png)](https://gyazo.com/567b679ddc5c3b82348e94aab14fb580)
+
 
 登録後ログイン画面
 [![Image from Gyazo](https://i.gyazo.com/d70a0f23dc929b383a6f59d9379656dd.png)](https://gyazo.com/d70a0f23dc929b383a6f59d9379656dd)
